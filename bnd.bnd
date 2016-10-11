@@ -1,0 +1,5 @@
+Private-Package: \
+	se.mtm.dotify.addons
+Include-Resource: / = src/
+-sources: false
+Service-Component: *
