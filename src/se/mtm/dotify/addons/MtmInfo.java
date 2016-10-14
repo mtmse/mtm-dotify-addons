@@ -13,7 +13,7 @@ import org.daisy.dotify.api.tasks.TaskSystemException;
 import org.daisy.dotify.tasks.tools.XsltTask;
 
 public class MtmInfo implements TaskGroup {
-	private static final String REQUIRED_KEY = "add-mtm-info";
+	private static final String REQUIRED_KEY = "apply-mtm-addons";
 	static final List<TaskOption> REQUIRED_OPTIONS;
 	static {
 		List<TaskOption> ret = new ArrayList<>();

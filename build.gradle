@@ -44,7 +44,7 @@ sourceSets.main {
 
 dependencies {
 	provided group: "biz.aQute.bnd", name: "annotation", version: "2.3.0"
-	compile 'org.daisy.dotify:dotify.task.impl:2.7.0'
+	compile 'org.daisy.dotify:dotify.task.impl:2.8.0'
 }
 
 buildscript {
