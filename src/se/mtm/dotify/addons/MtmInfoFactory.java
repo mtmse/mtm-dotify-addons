@@ -17,13 +17,17 @@ public class MtmInfoFactory implements TaskGroupFactory {
 
 	public MtmInfoFactory() {
 		supportedSpecifications = new HashSet<>();
-		String locale = "sv-SE";
-		TaskGroupSpecification.Builder builder = new TaskGroupSpecification.Builder("html", "html", locale);
+		supportedSpecifications.add(makeSpec("html"));
+		supportedSpecifications.add(makeSpec("dtbook"));
+		supportedSpecifications.add(makeSpec("xml"));
+	}
+	
+	private static TaskGroupSpecification makeSpec(String format) {
+		TaskGroupSpecification.Builder builder = new TaskGroupSpecification.Builder(format, format, "sv-SE");
 		for (TaskOption option : MtmInfo.REQUIRED_OPTIONS) {
 			builder.addRequired(option);
 		}
-		supportedSpecifications.add(builder.build()
-		);
+		return builder.build();
 	}
 
 	@Override
@@ -38,7 +42,7 @@ public class MtmInfoFactory implements TaskGroupFactory {
 
 	@Override
 	public TaskGroup newTaskGroup(TaskGroupSpecification spec) {
-		return new MtmInfo();
+		return new MtmInfo(spec.getInputFormat());
 	}
 
 	@Override

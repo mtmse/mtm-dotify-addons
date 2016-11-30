@@ -10,7 +10,6 @@ import org.daisy.dotify.api.tasks.TaskGroup;
 import org.daisy.dotify.api.tasks.TaskOption;
 import org.daisy.dotify.api.tasks.TaskOptionValue;
 import org.daisy.dotify.api.tasks.TaskSystemException;
-import org.daisy.dotify.tasks.tools.XsltTask;
 
 public class MtmInfo implements TaskGroup {
 	private static final String REQUIRED_KEY = "apply-mtm-addons";
@@ -24,17 +23,30 @@ public class MtmInfo implements TaskGroup {
 				.build());
 		REQUIRED_OPTIONS = Collections.unmodifiableList(ret);
 	}
+	private final String inputFormat;
+	
+	MtmInfo(String inputFormat) {
+		this.inputFormat = inputFormat;
+	}
 
 	@Override
 	public String getName() {
-		return "MTM Info";
+		return "MTM Info (" + inputFormat + ")";
 	}
 
 	@Override
 	public List<InternalTask> compile(Map<String, Object> parameters) throws TaskSystemException {
 		if (validateRequirements(parameters)) {
 			ArrayList<InternalTask> ret = new ArrayList<>();
-			ret.add(new XsltTask(getName(), this.getClass().getResource("resource-files/info-html.xsl"), parameters));
+			if ("html".equalsIgnoreCase(inputFormat)) {
+				ret.addAll(MtmInfoProcessor.getHtmlTasks(parameters));
+			} else if ("xml".equalsIgnoreCase(inputFormat) || "dtbook".equalsIgnoreCase(inputFormat)) {
+				//Currently, if this is the initial step all xml-based formats will come in as
+				//"xml" and need to be parsed again to get the actual format. This should be fixed
+				//in the surrounding code. Once it has been, this can be updated.
+				//See also https://github.com/brailleapps/dotify.task-api/issues/5
+				ret.add(new MtmInfoProcessor(inputFormat, parameters));
+			}
 			return ret;
 		} else {
 			return Collections.emptyList();
