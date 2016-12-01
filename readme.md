@@ -1,4 +1,4 @@
-
+[![Build Status](https://travis-ci.org/mtmse/mtm-dotify-addons.svg?branch=master)](https://travis-ci.org/mtmse/mtm-dotify-addons)
 [![Type](https://img.shields.io/badge/type-provider_bundle-blue.svg)](https://github.com/brailleapps/wiki/wiki/Types)
 
 # mtm-dotify-addons #
