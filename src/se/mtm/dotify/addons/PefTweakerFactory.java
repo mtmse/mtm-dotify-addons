@@ -46,6 +46,11 @@ public class PefTweakerFactory implements TaskGroupFactory {
 	}
 	
 	@Override
+	public boolean supportsSpecification(TaskGroupInformation spec) {
+		return listAll().contains(spec);
+	}
+	
+	@Override
 	@Deprecated
 	public Set<TaskGroupSpecification> listSupportedSpecifications() {
 		return Collections.unmodifiableSet(supportedSpecifications);

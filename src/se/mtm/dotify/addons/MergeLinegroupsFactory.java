@@ -14,25 +14,23 @@ import org.daisy.dotify.api.tasks.TaskOption;
 import aQute.bnd.annotation.component.Component;
 
 @Component
-public class MtmInfoFactory implements TaskGroupFactory {
+public class MergeLinegroupsFactory implements TaskGroupFactory {
 	private final Set<TaskGroupSpecification> supportedSpecifications;
 	private final Set<TaskGroupInformation> information;
 
-	public MtmInfoFactory() {
+	public MergeLinegroupsFactory() {
 		supportedSpecifications = new HashSet<>();
-		supportedSpecifications.add(makeSpec("html"));
 		supportedSpecifications.add(makeSpec("dtbook"));
 		supportedSpecifications.add(makeSpec("xml"));
 		Set<TaskGroupInformation> tmp = new HashSet<>();
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("html").locale("sv-SE").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("dtbook").locale("sv-SE").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("xml").locale("sv-SE").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("dtbook").locale("sv-SE").setRequiredOptions(MergeLinegroups.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("xml").locale("sv-SE").setRequiredOptions(MergeLinegroups.REQUIRED_OPTIONS).build());
 		information = Collections.unmodifiableSet(tmp);
 	}
 	
 	private static TaskGroupSpecification makeSpec(String format) {
 		TaskGroupSpecification.Builder builder = new TaskGroupSpecification.Builder(format, format, "sv-SE");
-		for (TaskOption option : MtmInfo.REQUIRED_OPTIONS) {
+		for (TaskOption option : MergeLinegroups.REQUIRED_OPTIONS) {
 			builder.addRequired(option);
 		}
 		return builder.build();
@@ -62,7 +60,7 @@ public class MtmInfoFactory implements TaskGroupFactory {
 
 	@Override
 	public TaskGroup newTaskGroup(TaskGroupSpecification spec) {
-		return new MtmInfo(spec.getInputFormat());
+		return new MergeLinegroups(spec.getInputFormat());
 	}
 
 	@Override

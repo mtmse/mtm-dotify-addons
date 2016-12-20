@@ -15,11 +15,11 @@ import org.daisy.dotify.common.xml.XMLTools;
 import org.daisy.dotify.common.xml.XMLToolsException;
 import org.daisy.dotify.tasks.tools.XsltTask;
 
-class MtmInfoProcessor extends ExpandingTask {
+class MergeLinegroupsProcessor extends ExpandingTask {
 	private final Map<String, Object> xsltParams;
 
-	MtmInfoProcessor(Map<String, Object> xsltParams) {
-		super("MTM addons");
+	MergeLinegroupsProcessor(Map<String, Object> xsltParams) {
+		super("MTM linegroups");
 		this.xsltParams = xsltParams;
 	}
 
@@ -37,8 +37,6 @@ class MtmInfoProcessor extends ExpandingTask {
 			String rootElement = peekResult.getLocalName();
 			if ("dtbook".equals(rootElement) && "http://www.daisy.org/z3986/2005/dtbook/".equals(rootNS)) {
 				ret.addAll(getDtbookTasks(xsltParams));
-			} else if ("html".equals(rootElement) && (rootNS==null || "http://www.w3.org/1999/xhtml".equals(rootNS))) {
-				ret.addAll(getHtmlTasks(xsltParams));
 			}
 		} catch (XMLToolsException e) {
 			throw new InternalTaskException("XMLToolsException while reading input", e);
@@ -48,14 +46,7 @@ class MtmInfoProcessor extends ExpandingTask {
 	
 	static List<InternalTask> getDtbookTasks(Map<String, Object> parameters) {
 		ArrayList<InternalTask> ret = new ArrayList<>();
-		ret.add(new XsltTask("Move cover text", MtmInfoProcessor.class.getResource("resource-files/move-cover-text.xsl"), parameters));
-		ret.add(new XsltTask("MTM info (dtbook)", MtmInfoProcessor.class.getResource("resource-files/punktinfo.xsl"), parameters));
-		return ret;
-	}
-	
-	static List<InternalTask> getHtmlTasks(Map<String, Object> parameters) {
-		ArrayList<InternalTask> ret = new ArrayList<>();
-		ret.add(new XsltTask("MTM info (html)", MtmInfoProcessor.class.getResource("resource-files/info-html.xsl"), parameters));
+		ret.add(new XsltTask("Merge linegroups", MergeLinegroupsProcessor.class.getResource("resource-files/linegroup.xsl"), parameters));
 		return ret;
 	}
 

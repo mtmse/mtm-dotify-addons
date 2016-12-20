@@ -26,13 +26,14 @@ def repoRevision = System.getenv("REPO_REVISION")!=null?System.getenv("REPO_REVI
 
 javadoc {
 	options.encoding = 'UTF-8'
-	options.links('http://docs.oracle.com/javase/7/docs/api/')
+	options.links('http://docs.oracle.com/javase/8/docs/api/')
 }
 
 repositories {
 	mavenCentral()
 	//mavenLocal()
 	//maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+	//maven { url "https://oss.sonatype.org/content/groups/staging" }
 }
 
 // Due to problems with relative links in the test xslt wrapper Eclipse and Gradle
@@ -44,7 +45,7 @@ sourceSets.main {
 
 dependencies {
 	provided group: "biz.aQute.bnd", name: "annotation", version: "2.3.0"
-	compile 'org.daisy.dotify:dotify.task.impl:2.13.0'
+	compile 'org.daisy.dotify:dotify.task.impl:2.14.0'
 	compile 'org.daisy.dotify:dotify.common:2.2.0'
 }
 
