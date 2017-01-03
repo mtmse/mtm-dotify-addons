@@ -40,7 +40,9 @@ public class MtmInfo implements TaskGroup {
 			ArrayList<InternalTask> ret = new ArrayList<>();
 			if ("html".equalsIgnoreCase(inputFormat)) {
 				ret.addAll(MtmInfoProcessor.getHtmlTasks(parameters));
-			} else if ("xml".equalsIgnoreCase(inputFormat) || "dtbook".equalsIgnoreCase(inputFormat)) {
+			} else if ("dtbook".equalsIgnoreCase(inputFormat)) {
+				ret.addAll(MtmInfoProcessor.getDtbookTasks(parameters));
+			} else if ("xml".equalsIgnoreCase(inputFormat)) {
 				//Currently, if this is the initial step all xml-based formats will come in as
 				//"xml" and need to be parsed again to get the actual format. This should be fixed
 				//in the surrounding code. Once it has been, this can be updated.

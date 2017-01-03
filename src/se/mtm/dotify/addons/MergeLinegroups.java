@@ -38,7 +38,9 @@ public class MergeLinegroups implements TaskGroup {
 	public List<InternalTask> compile(Map<String, Object> parameters) throws TaskSystemException {
 		if (validateRequirements(parameters)) {
 			ArrayList<InternalTask> ret = new ArrayList<>();
-			if ("xml".equalsIgnoreCase(inputFormat) || "dtbook".equalsIgnoreCase(inputFormat)) {
+			if ("dtbook".equalsIgnoreCase(inputFormat)) {
+				ret.addAll(MergeLinegroupsProcessor.getDtbookTasks(parameters));
+			} else if ("xml".equalsIgnoreCase(inputFormat)) {
 				//Currently, if this is the initial step all xml-based formats will come in as
 				//"xml" and need to be parsed again to get the actual format. This should be fixed
 				//in the surrounding code. Once it has been, this can be updated.
