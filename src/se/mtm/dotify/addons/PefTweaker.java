@@ -55,9 +55,4 @@ public class PefTweaker implements TaskGroup {
 		return parameters.containsKey(REQUIRED_KEY) && "true".equalsIgnoreCase(""+parameters.get(REQUIRED_KEY));
 	}
 
-	@Override
-	public List<TaskOption> getOptions() {
-		return Collections.emptyList();
-	}
-
 }
