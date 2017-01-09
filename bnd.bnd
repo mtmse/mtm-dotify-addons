@@ -1,3 +1,5 @@
+Import-Package: \
+	org.daisy.dotify.api.tasks; provide:=true, *
 Private-Package: \
 	se.mtm.dotify.addons
 Include-Resource: / = src/
