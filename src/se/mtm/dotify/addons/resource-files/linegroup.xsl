@@ -32,6 +32,14 @@
 	<!-- remove @class on p elements -->
 	<xsl:param name="clear-p-class" select="true()" as="xs:boolean"/>
 	
+	<!-- excludes poem from linegroup processing -->
+	<xsl:template match="dtb:poem">
+		<xsl:if test="descendant::dtb:linegroup">
+			<xsl:message terminate="no">INFO: Linegroups inside a poem was not merged.</xsl:message>
+		</xsl:if>
+		<xsl:copy-of select="."/>
+	</xsl:template>
+	
 	<xsl:template match="dtb:linegroup">
 		<xsl:variable name="linegroup">
 			<xsl:apply-templates/>
