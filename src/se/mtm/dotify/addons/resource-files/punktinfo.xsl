@@ -36,18 +36,19 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:dtb="http://www.daisy.org/z3986/2005/dtbook/"
 	xmlns:d="http://www.tpb.se/stylesheets/dtbinfo"
+	xmlns:dotify="http://brailleapps.github.io/ns/dotify"
 	xmlns="http://www.daisy.org/z3986/2005/dtbook/"
-	exclude-result-prefixes="dtb d">
+	exclude-result-prefixes="dtb d dotify">
 
 	<xsl:include href="./lib/recursive-copy.xsl"/>
 	<xsl:include href="./lib/dtbook-output.xsl"/>
 	<xsl:include href="./lib/validation-tests.xsl"/>
 	<xsl:include href="./lib/localization.xsl"/>
 	
-	<xsl:param name="year" select="format-date(current-date(), '[Y0001]')"/>
-	<xsl:param name="identifier" select="'P??????'"/>
+	<xsl:param name="year" select="format-date(current-date(), '[Y0001]')" dotify:desc="The year for the product on the form YYYY."/>
+	<xsl:param name="identifier" select="'P??????'" dotify:desc="The product identifier"/>
 	<!-- keep/remove captions -->
-	<xsl:param name="captions" select="'keep'"/>
+	<xsl:param name="captions" select="'keep'" dotify:desc="Remove imagegroups that does not contain prodnotes (keep/remove)"/>
 	
 	<xsl:variable name="lang">
 		<xsl:for-each select="/dtb:dtbook">
