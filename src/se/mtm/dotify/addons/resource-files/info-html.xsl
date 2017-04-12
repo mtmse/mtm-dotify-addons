@@ -14,7 +14,7 @@
 	<xsl:include href="lib/messages/errors.xsl"/>
 	
 	<xsl:param name="year" select="format-date(current-date(), '[Y0001]')" dotify:desc="The year for the product on the form YYYY."/>
-	<xsl:param name="identifier" select="'P??????'" dotify:desc="The product identifier"/>
+	<xsl:param name="identifier" select="'P??????'" dotify:desc="The product identifier" dotify:default="P??????"/>
 	<!-- keep/remove captions -->
 	<xsl:param name="captions" select="'keep'"/>
 	
