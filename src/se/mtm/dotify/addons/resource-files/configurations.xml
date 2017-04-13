@@ -1,0 +1,191 @@
+<templates>
+	<template identifier="mtm-a" desc="Tättryck. Versaler: ja. Avstavning: ja. Stilsorter: ja. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: först. Baksidestext: först. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="A - Skönlitteratur vuxen Hc Hce">
+		<entry key="page-width" value="32"/>
+		<entry key="page-height" value="29"/>
+		<entry key="inner-margin" value="2"/>
+		<entry key="outer-margin" value="2"/>
+		<entry key="duplex" value="true"/>
+		<entry key="hyphenate" value="true"/>
+		<entry key="row-spacing" value="1"/>
+		<entry key="mark-capital-letters" value="true"/>
+		<entry key="captions" value="false"/>
+		<entry key="merge-line-groups" value="false"/>
+		<entry key="default-paragraph-separator" value="indent"/>
+		<entry key="remove-styles" value="false"/>
+		<entry key="toc-depth" value="1"/>
+		<entry key="volume-toc" value="true"/>
+		<entry key="colophon-metadata-placement" value="begin"/>
+		<entry key="rear-cover-placement" value="begin"/>
+		<entry key="splitterMax" value="50"/>
+		<entry key="apply-mtm-addons" value="true"/>
+		<entry key="apply-pef-tweaks" value="true"/>
+	</template>
+	<template identifier="mtm-b" desc="Tättryck. Versaler: ja. Avstavning: ja. Stilsorter: ja. Innehållsförteckning: ja max 6 nivåer. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: först. Baksidestext: först. Dubbelpaginering: ja. Markering av sidbyte: ja." nicename="B - Enkel facklitteratur vuxen">
+		<entry key="page-width" value="32"/>
+		<entry key="page-height" value="29"/>
+		<entry key="inner-margin" value="2"/>
+		<entry key="outer-margin" value="2"/>
+		<entry key="duplex" value="true"/>
+		<entry key="hyphenate" value="true"/>
+		<entry key="row-spacing" value="1"/>
+		<entry key="mark-capital-letters" value="true"/>
+		<entry key="captions" value="false"/>
+		<entry key="merge-line-groups" value="false"/>
+		<entry key="default-paragraph-separator" value="indent"/>
+		<entry key="remove-styles" value="false"/>
+		<entry key="show-braille-page-numbers" value="true"/>
+		<entry key="show-print-page-numbers" value="true"/>
+		<entry key="show-print-page-breaks" value="true"/>
+		<entry key="toc-depth" value="6"/>
+		<entry key="volume-toc" value="true"/>
+		<entry key="colophon-metadata-placement" value="begin"/>
+		<entry key="rear-cover-placement" value="begin"/>
+		<entry key="splitterMax" value="50"/>
+		<entry key="apply-mtm-addons" value="true"/>
+		<entry key="apply-pef-tweaks" value="true"/>
+	</template>
+	<template identifier="mtm-c" desc="Tättryck. Versaler: ja. Avstavning: ja. Stilsorter: ja. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: först. Baksidestext: först. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="C - Skönlitteratur uHc uHce">
+		<entry key="page-width" value="32"/>
+		<entry key="page-height" value="29"/>
+		<entry key="inner-margin" value="2"/>
+		<entry key="outer-margin" value="2"/>
+		<entry key="duplex" value="true"/>
+		<entry key="hyphenate" value="true"/>
+		<entry key="row-spacing" value="1"/>
+		<entry key="mark-capital-letters" value="true"/>
+		<entry key="captions" value="false"/>
+		<entry key="merge-line-groups" value="false"/>
+		<entry key="default-paragraph-separator" value="indent"/>
+		<entry key="remove-styles" value="false"/>
+		<entry key="show-braille-page-numbers" value="true"/>
+		<entry key="show-print-page-numbers" value="true"/>
+		<entry key="show-print-page-breaks" value="false"/>
+		<entry key="toc-depth" value="1"/>
+		<entry key="volume-toc" value="true"/>
+		<entry key="colophon-metadata-placement" value="end"/>
+		<entry key="rear-cover-placement" value="end"/>
+		<entry key="splitterMax" value="50"/>
+		<entry key="apply-mtm-addons" value="true"/>
+		<entry key="apply-pef-tweaks" value="true"/>
+	</template>
+	<template identifier="mtm-d" desc="Dubbelsidigt. Tättryck. Versaler: ja. Avstavning: ja. Merge linegroup: ja. Styckebrytning: tom rad. Stilsorter: nej. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: sist. Baksidestext: sist. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="D - Skönlitteratur barn Hcg">
+		<entry key="page-width" value="32"/>
+		<entry key="page-height" value="29"/>
+		<entry key="inner-margin" value="2"/>
+		<entry key="outer-margin" value="2"/>
+		<entry key="duplex" value="true"/>
+		<entry key="hyphenate" value="true"/>
+		<entry key="row-spacing" value="1"/>
+		<entry key="mark-capital-letters" value="true"/>
+		<entry key="captions" value="false"/>
+		<entry key="merge-line-groups" value="true"/>
+		<entry key="default-paragraph-separator" value="empty-line"/>
+		<entry key="remove-styles" value="true"/>
+		<entry key="toc-depth" value="1"/>
+		<entry key="volume-toc" value="true"/>
+		<entry key="colophon-metadata-placement" value="end"/>
+		<entry key="rear-cover-placement" value="end"/>
+		<entry key="splitterMax" value="50"/>
+		<entry key="apply-mtm-addons" value="true"/>
+		<entry key="apply-pef-tweaks" value="true"/>
+	</template>
+	<template identifier="mtm-e" desc="Dubbelsidigt. Glestryck. Versaler: nej. Avstavning: nej. Merge linegroup: ja. Styckebrytning: indrag. Stilsorter: nej. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: sist. Baksidestext: sist. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="E - Skönlittaratur små barn Hcf läsa själv">
+		<entry key="page-width" value="32"/>
+		<entry key="page-height" value="29"/>
+		<entry key="inner-margin" value="2"/>
+		<entry key="outer-margin" value="2"/>
+		<entry key="duplex" value="true"/>
+		<entry key="hyphenate" value="false"/>
+		<entry key="row-spacing" value="2"/>
+		<entry key="mark-capital-letters" value="false"/>
+		<entry key="captions" value="false"/>
+		<entry key="merge-line-groups" value="true"/>
+		<entry key="default-paragraph-separator" value="indent"/>
+		<entry key="remove-styles" value="true"/>
+		<entry key="show-braille-page-numbers" value="true"/>
+		<entry key="show-print-page-numbers" value="true"/>
+		<entry key="show-print-page-breaks" value="false"/>
+		<entry key="toc-depth" value="1"/>
+		<entry key="volume-toc" value="true"/>
+		<entry key="colophon-metadata-placement" value="end"/>
+		<entry key="rear-cover-placement" value="end"/>
+		<entry key="splitterMax" value="50"/>
+		<entry key="apply-mtm-addons" value="true"/>
+		<entry key="apply-pef-tweaks" value="true"/>
+	</template>
+	<template identifier="mtm-f" desc="Dubbelsidigt. Glestryck. Versaler: nej. Avstavning: ja. Styckebrytning: indrag. Stilsorter: nej. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: sist. Baksidestext: sist. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="F - Skönlitteratur små barn Hcf läsa själv svårare">
+		<entry key="page-width" value="32"/>
+		<entry key="page-height" value="29"/>
+		<entry key="inner-margin" value="2"/>
+		<entry key="outer-margin" value="2"/>
+		<entry key="duplex" value="true"/>
+		<entry key="hyphenate" value="true"/>
+		<entry key="row-spacing" value="2"/>
+		<entry key="mark-capital-letters" value="false"/>
+		<entry key="captions" value="false"/>
+		<entry key="merge-line-groups" value="true"/>
+		<entry key="default-paragraph-separator" value="indent"/>
+		<entry key="remove-styles" value="true"/>
+		<entry key="show-braille-page-numbers" value="true"/>
+		<entry key="show-print-page-numbers" value="true"/>
+		<entry key="show-print-page-breaks" value="false"/>
+		<entry key="toc-depth" value="1"/>
+		<entry key="volume-toc" value="true"/>
+		<entry key="colophon-metadata-placement" value="end"/>
+		<entry key="rear-cover-placement" value="end"/>
+		<entry key="splitterMax" value="50"/>
+		<entry key="apply-mtm-addons" value="true"/>
+		<entry key="apply-pef-tweaks" value="true"/>
+	</template>
+	<template identifier="mtm-g" desc="Dubbelsidigt. Tättryck. Versaler: ja. Avstavning: ja. Styckebrytning: indrag. Stilsorter: ja. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: sist. Baksidestext: sist. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="G - Skönlitteratur barn Hcf högläsning">
+		<entry key="page-width" value="32"/>
+		<entry key="page-height" value="29"/>
+		<entry key="inner-margin" value="2"/>
+		<entry key="outer-margin" value="2"/>
+		<entry key="duplex" value="true"/>
+		<entry key="hyphenate" value="true"/>
+		<entry key="row-spacing" value="1"/>
+		<entry key="mark-capital-letters" value="true"/>
+		<entry key="captions" value="false"/>
+		<entry key="merge-line-groups" value="false"/>
+		<entry key="default-paragraph-separator" value="indent"/>
+		<entry key="remove-styles" value="false"/>
+		<entry key="show-braille-page-numbers" value="true"/>
+		<entry key="show-print-page-numbers" value="true"/>
+		<entry key="show-print-page-breaks" value="false"/>
+		<entry key="toc-depth" value="1"/>
+		<entry key="volume-toc" value="true"/>
+		<entry key="colophon-metadata-placement" value="end"/>
+		<entry key="rear-cover-placement" value="end"/>
+		<entry key="splitterMax" value="50"/>
+		<entry key="apply-mtm-addons" value="true"/>
+		<entry key="apply-pef-tweaks" value="true"/>
+	</template>
+	
+	<!-- 
+	<template identifier="" desc="" nicename="">
+		<entry key="page-width" value=""/>
+		<entry key="page-height" value=""/>
+		<entry key="inner-margin" value=""/>
+		<entry key="outer-margin" value=""/>
+		<entry key="duplex" value=""/>
+		<entry key="hyphenate" value=""/>
+		<entry key="row-spacing" value=""/>
+		<entry key="mark-capital-letters" value=""/>
+		<entry key="captions" value=""/>
+		<entry key="merge-line-groups" value=""/>
+		<entry key="default-paragraph-separator" value=""/>
+		<entry key="remove-styles" value=""/>
+		<entry key="show-braille-page-numbers" value=""/>
+		<entry key="show-print-page-numbers" value=""/>
+		<entry key="show-print-page-breaks" value=""/>
+		<entry key="toc-depth" value=""/>
+		<entry key="volume-toc" value=""/>
+		<entry key="colophon-metadata-placement" value=""/>
+		<entry key="rear-cover-placement" value=""/>
+		<entry key="splitterMax" value="50"/>
+		<entry key="apply-mtm-addons" value="true"/>
+		<entry key="apply-pef-tweaks" value="true"/>
+	</template>
+	-->
+</templates>
