@@ -8,7 +8,7 @@
 		<entry key="hyphenate" value="true"/>
 		<entry key="row-spacing" value="1"/>
 		<entry key="mark-capital-letters" value="true"/>
-		<entry key="captions" value="false"/>
+		<entry key="captions" value="remove"/>
 		<entry key="merge-line-groups" value="false"/>
 		<entry key="default-paragraph-separator" value="indent"/>
 		<entry key="remove-styles" value="false"/>
@@ -29,7 +29,7 @@
 		<entry key="hyphenate" value="true"/>
 		<entry key="row-spacing" value="1"/>
 		<entry key="mark-capital-letters" value="true"/>
-		<entry key="captions" value="false"/>
+		<entry key="captions" value="remove"/>
 		<entry key="merge-line-groups" value="false"/>
 		<entry key="default-paragraph-separator" value="indent"/>
 		<entry key="remove-styles" value="false"/>
@@ -53,7 +53,7 @@
 		<entry key="hyphenate" value="true"/>
 		<entry key="row-spacing" value="1"/>
 		<entry key="mark-capital-letters" value="true"/>
-		<entry key="captions" value="false"/>
+		<entry key="captions" value="remove"/>
 		<entry key="merge-line-groups" value="false"/>
 		<entry key="default-paragraph-separator" value="indent"/>
 		<entry key="remove-styles" value="false"/>
@@ -77,7 +77,7 @@
 		<entry key="hyphenate" value="true"/>
 		<entry key="row-spacing" value="1"/>
 		<entry key="mark-capital-letters" value="true"/>
-		<entry key="captions" value="false"/>
+		<entry key="captions" value="remove"/>
 		<entry key="merge-line-groups" value="true"/>
 		<entry key="default-paragraph-separator" value="empty-line"/>
 		<entry key="remove-styles" value="true"/>
@@ -98,7 +98,7 @@
 		<entry key="hyphenate" value="false"/>
 		<entry key="row-spacing" value="2"/>
 		<entry key="mark-capital-letters" value="false"/>
-		<entry key="captions" value="false"/>
+		<entry key="captions" value="remove"/>
 		<entry key="merge-line-groups" value="true"/>
 		<entry key="default-paragraph-separator" value="indent"/>
 		<entry key="remove-styles" value="true"/>
@@ -122,7 +122,7 @@
 		<entry key="hyphenate" value="true"/>
 		<entry key="row-spacing" value="2"/>
 		<entry key="mark-capital-letters" value="false"/>
-		<entry key="captions" value="false"/>
+		<entry key="captions" value="remove"/>
 		<entry key="merge-line-groups" value="true"/>
 		<entry key="default-paragraph-separator" value="indent"/>
 		<entry key="remove-styles" value="true"/>
@@ -146,7 +146,7 @@
 		<entry key="hyphenate" value="true"/>
 		<entry key="row-spacing" value="1"/>
 		<entry key="mark-capital-letters" value="true"/>
-		<entry key="captions" value="false"/>
+		<entry key="captions" value="remove"/>
 		<entry key="merge-line-groups" value="false"/>
 		<entry key="default-paragraph-separator" value="indent"/>
 		<entry key="remove-styles" value="false"/>
