@@ -19,6 +19,7 @@
 		<entry key="splitterMax" value="50"/>
 		<entry key="apply-mtm-addons" value="true"/>
 		<entry key="apply-pef-tweaks" value="true"/>
+		<entry key="show-toc-preamble" value="false"/>
 	</template>
 	<template identifier="mtm-b" desc="Tättryck. Versaler: ja. Avstavning: ja. Stilsorter: ja. Innehållsförteckning: ja max 6 nivåer. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: först. Baksidestext: först. Dubbelpaginering: ja. Markering av sidbyte: ja." nicename="B - Enkel facklitteratur vuxen">
 		<entry key="page-width" value="32"/>
@@ -43,6 +44,7 @@
 		<entry key="splitterMax" value="50"/>
 		<entry key="apply-mtm-addons" value="true"/>
 		<entry key="apply-pef-tweaks" value="true"/>
+		<entry key="show-toc-preamble" value="false"/>
 	</template>
 	<template identifier="mtm-c" desc="Tättryck. Versaler: ja. Avstavning: ja. Stilsorter: ja. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: först. Baksidestext: först. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="C - Skönlitteratur uHc uHce">
 		<entry key="page-width" value="32"/>
@@ -67,6 +69,7 @@
 		<entry key="splitterMax" value="50"/>
 		<entry key="apply-mtm-addons" value="true"/>
 		<entry key="apply-pef-tweaks" value="true"/>
+		<entry key="show-toc-preamble" value="false"/>
 	</template>
 	<template identifier="mtm-d" desc="Dubbelsidigt. Tättryck. Versaler: ja. Avstavning: ja. Merge linegroup: ja. Styckebrytning: tom rad. Stilsorter: nej. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: sist. Baksidestext: sist. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="D - Skönlitteratur barn Hcg">
 		<entry key="page-width" value="32"/>
@@ -88,6 +91,7 @@
 		<entry key="splitterMax" value="50"/>
 		<entry key="apply-mtm-addons" value="true"/>
 		<entry key="apply-pef-tweaks" value="true"/>
+		<entry key="show-toc-preamble" value="false"/>
 	</template>
 	<template identifier="mtm-e" desc="Dubbelsidigt. Glestryck. Versaler: nej. Avstavning: nej. Merge linegroup: ja. Styckebrytning: indrag. Stilsorter: nej. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: sist. Baksidestext: sist. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="E - Skönlittaratur små barn Hcf läsa själv">
 		<entry key="page-width" value="32"/>
@@ -112,6 +116,7 @@
 		<entry key="splitterMax" value="50"/>
 		<entry key="apply-mtm-addons" value="true"/>
 		<entry key="apply-pef-tweaks" value="true"/>
+		<entry key="show-toc-preamble" value="false"/>
 	</template>
 	<template identifier="mtm-f" desc="Dubbelsidigt. Glestryck. Versaler: nej. Avstavning: ja. Styckebrytning: indrag. Stilsorter: nej. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: sist. Baksidestext: sist. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="F - Skönlitteratur små barn Hcf läsa själv svårare">
 		<entry key="page-width" value="32"/>
@@ -136,6 +141,7 @@
 		<entry key="splitterMax" value="50"/>
 		<entry key="apply-mtm-addons" value="true"/>
 		<entry key="apply-pef-tweaks" value="true"/>
+		<entry key="show-toc-preamble" value="false"/>
 	</template>
 	<template identifier="mtm-g" desc="Dubbelsidigt. Tättryck. Versaler: ja. Avstavning: ja. Styckebrytning: indrag. Stilsorter: ja. Innehållsförteckning: ja. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: sist. Baksidestext: sist. Dubbelpaginering: ja. Markering av sidbyte: nej." nicename="G - Skönlitteratur barn Hcf högläsning">
 		<entry key="page-width" value="32"/>
@@ -160,6 +166,7 @@
 		<entry key="splitterMax" value="50"/>
 		<entry key="apply-mtm-addons" value="true"/>
 		<entry key="apply-pef-tweaks" value="true"/>
+		<entry key="show-toc-preamble" value="false"/>
 	</template>
 	
 	<!-- 
@@ -186,6 +193,7 @@
 		<entry key="splitterMax" value="50"/>
 		<entry key="apply-mtm-addons" value="true"/>
 		<entry key="apply-pef-tweaks" value="true"/>
+		<entry key="show-toc-preamble" value="false"/>
 	</template>
 	-->
 </templates>
