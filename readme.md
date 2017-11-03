@@ -8,7 +8,7 @@ Provides implementations for enhancing epub html to meet the needs of MTM:
 
 ## Using ##
 
-Access the implementations via the `TaskGroupFactory` API in [dotify.task-api](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.daisy.dotify%22%20%20a%3A%22dotify.task-api%22) _or_ in an OSGi environment use  `TaskGroupFactoryMakerService`.
+Access the implementations via the `TaskGroupFactory` API in [streamline-api](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.daisy.streamline%22%20AND%20a%3A%22streamline-api%22) _or_ in an OSGi environment use  `TaskGroupFactoryMakerService`.
 
 ## Building ##
 Build with `gradlew build` (Windows) or `./gradlew build` (Mac/Linux)
