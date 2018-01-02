@@ -12,9 +12,9 @@ import java.util.logging.Logger;
 
 import javax.xml.stream.XMLInputFactory;
 
-import org.daisy.dotify.api.config.ConfigurationDetails;
-import org.daisy.dotify.api.config.ConfigurationsProvider;
-import org.daisy.dotify.api.config.ConfigurationsProviderException;
+import org.daisy.streamline.api.config.ConfigurationDetails;
+import org.daisy.streamline.api.config.ConfigurationsProvider;
+import org.daisy.streamline.api.config.ConfigurationsProviderException;
 
 import aQute.bnd.annotation.component.Component;
 

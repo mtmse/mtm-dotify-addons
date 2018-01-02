@@ -1,5 +1,6 @@
 Import-Package: \
-	org.daisy.dotify.api.tasks; provide:=true, *
+	org.daisy.streamline.api.tasks; provide:=true,\
+	org.daisy.streamline.api.config; provide:=true, *
 Private-Package: \
 	se.mtm.dotify.addons
 Include-Resource: / = src/

@@ -5,24 +5,24 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.daisy.dotify.api.tasks.InternalTask;
-import org.daisy.dotify.api.tasks.TaskGroup;
-import org.daisy.dotify.api.tasks.TaskOption;
-import org.daisy.dotify.api.tasks.TaskOptionValue;
-import org.daisy.dotify.api.tasks.TaskSystemException;
 import org.daisy.dotify.tasks.tools.XsltTask;
+import org.daisy.streamline.api.option.UserOption;
+import org.daisy.streamline.api.option.UserOptionValue;
+import org.daisy.streamline.api.tasks.InternalTask;
+import org.daisy.streamline.api.tasks.TaskGroup;
+import org.daisy.streamline.api.tasks.TaskSystemException;
 
 public class PefTweaker implements TaskGroup {
 	private static final String REQUIRED_KEY = "apply-pef-tweaks";
-	static final List<TaskOption> REQUIRED_OPTIONS;
+	static final List<UserOption> REQUIRED_OPTIONS;
 	static {
-		List<TaskOption> ret = new ArrayList<>();
-		ret.add(new TaskOption.Builder(REQUIRED_KEY).description("This parameter must be set for the group to be included.")
+		List<UserOption> ret = new ArrayList<>();
+		ret.add(new UserOption.Builder(REQUIRED_KEY).description("This parameter must be set for the group to be included.")
 				.defaultValue("false")
-				.addValue(new TaskOptionValue.Builder("true").description(
+				.addValue(new UserOptionValue.Builder("true").description(
 						"The pef-file will be enhanced with a few meta data entries. Also, empty pages are inserted so that "
 						+ "each duplex sequence ends on a verso page.").build())
-				.addValue(new TaskOptionValue.Builder("false").description("The group is not included.").build())
+				.addValue(new UserOptionValue.Builder("false").description("The group is not included.").build())
 				.build());
 		REQUIRED_OPTIONS = Collections.unmodifiableList(ret);
 	}

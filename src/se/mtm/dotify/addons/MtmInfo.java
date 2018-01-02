@@ -5,21 +5,21 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.daisy.dotify.api.tasks.InternalTask;
-import org.daisy.dotify.api.tasks.TaskGroup;
-import org.daisy.dotify.api.tasks.TaskOption;
-import org.daisy.dotify.api.tasks.TaskOptionValue;
-import org.daisy.dotify.api.tasks.TaskSystemException;
+import org.daisy.streamline.api.option.UserOption;
+import org.daisy.streamline.api.option.UserOptionValue;
+import org.daisy.streamline.api.tasks.InternalTask;
+import org.daisy.streamline.api.tasks.TaskGroup;
+import org.daisy.streamline.api.tasks.TaskSystemException;
 
 public class MtmInfo implements TaskGroup {
 	private static final String REQUIRED_KEY = "apply-mtm-addons";
-	static final List<TaskOption> REQUIRED_OPTIONS;
+	static final List<UserOption> REQUIRED_OPTIONS;
 	static {
-		List<TaskOption> ret = new ArrayList<>();
-		ret.add(new TaskOption.Builder(REQUIRED_KEY).description("This parameter must be set for the group to be included.")
+		List<UserOption> ret = new ArrayList<>();
+		ret.add(new UserOption.Builder(REQUIRED_KEY).description("This parameter must be set for the group to be included.")
 				.defaultValue("false")
-				.addValue(new TaskOptionValue.Builder("true").build())
-				.addValue(new TaskOptionValue.Builder("false").build())
+				.addValue(new UserOptionValue.Builder("true").build())
+				.addValue(new UserOptionValue.Builder("false").build())
 				.build());
 		REQUIRED_OPTIONS = Collections.unmodifiableList(ret);
 	}

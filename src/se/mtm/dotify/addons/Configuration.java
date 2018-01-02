@@ -19,7 +19,7 @@ import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-import org.daisy.dotify.api.config.ConfigurationDetails;
+import org.daisy.streamline.api.config.ConfigurationDetails;
 
 class Configuration {
 	private static final Logger logger = Logger.getLogger(Configuration.class.getCanonicalName());

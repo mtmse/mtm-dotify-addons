@@ -3,7 +3,7 @@ package se.mtm.dotify.addons;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
-import org.daisy.dotify.api.config.ConfigurationsProviderException;
+import org.daisy.streamline.api.config.ConfigurationsProviderException;
 import org.junit.Test;
 @SuppressWarnings("javadoc")
 public class MtmConfigurationsTest {
