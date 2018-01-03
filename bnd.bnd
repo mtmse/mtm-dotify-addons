@@ -3,6 +3,5 @@ Import-Package: \
 	org.daisy.streamline.api.config; provide:=true, *
 Private-Package: \
 	se.mtm.dotify.addons
-Include-Resource: / = src/
--sources: false
+-sources: true
 Service-Component: *
