@@ -15,8 +15,7 @@ import javax.xml.stream.XMLInputFactory;
 import org.daisy.streamline.api.config.ConfigurationDetails;
 import org.daisy.streamline.api.config.ConfigurationsProvider;
 import org.daisy.streamline.api.config.ConfigurationsProviderException;
-
-import aQute.bnd.annotation.component.Component;
+import org.osgi.service.component.annotations.Component;
 
 @Component
 public class MtmConfigurations implements ConfigurationsProvider {
