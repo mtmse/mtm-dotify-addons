@@ -40,17 +40,13 @@ dependencies {
 	testCompile group: "junit", name: "junit", version: "4.7"
 }
 
-task updateBndVersion() {
-	doLast() {
-		String contents = file('bnd.bnd').getText('UTF-8')
-		file('bnd.bnd').write(contents.replaceAll('Bundle-Version: [\\d\\.A-Za-z\\-]+', "Bundle-Version: $version"), 'UTF-8')
-	}
-}
-
 bundle {
     instructions << [
-		//must use file() to resolve against the build.gradle in Eclipse
-        "-include": file('bnd.bnd'),
+		'-sources': 'true',
+		'Import-Package': 'org.daisy.streamline.api.tasks; provide:=true,'+
+							'org.daisy.streamline.api.config; provide:=true, *',
+		'Private-Package': 'se.mtm.dotify.addons',
+		'Service-Component': '*',
         'Built-By': System.getProperty("user.name"),
         'Built-On': new Date().format('yyyy-MM-dd'),
         'Repository-Revision': "$repoRevision",
