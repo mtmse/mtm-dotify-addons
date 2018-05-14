@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.daisy.dotify.tasks.tools.XsltTask;
+import org.daisy.streamline.api.media.FormatIdentifier;
 import org.daisy.streamline.api.option.UserOption;
 import org.daisy.streamline.api.option.UserOptionValue;
 import org.daisy.streamline.api.tasks.InternalTask;
@@ -28,8 +29,8 @@ public class PefTweaker implements TaskGroup {
 	}
 	private final String inputFormat;
 	
-	PefTweaker(String inputFormat) {
-		this.inputFormat = inputFormat;
+	PefTweaker(FormatIdentifier inputFormat) {
+		this.inputFormat = inputFormat.getIdentifier();
 	}
 
 	@Override

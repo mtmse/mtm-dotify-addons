@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+import org.daisy.streamline.api.media.FormatIdentifier;
 import org.daisy.streamline.api.option.UserOption;
 import org.daisy.streamline.api.option.UserOptionValue;
 import org.daisy.streamline.api.tasks.InternalTask;
@@ -25,8 +26,8 @@ public class MtmInfo implements TaskGroup {
 	}
 	private final String inputFormat;
 	
-	MtmInfo(String inputFormat) {
-		this.inputFormat = inputFormat;
+	MtmInfo(FormatIdentifier inputFormat) {
+		this.inputFormat = inputFormat.getIdentifier();
 	}
 
 	@Override

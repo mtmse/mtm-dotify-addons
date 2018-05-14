@@ -28,7 +28,7 @@ public class MergeLinegroupsFactory implements TaskGroupFactory {
 
 	@Override
 	public TaskGroup newTaskGroup(TaskGroupSpecification spec) {
-		return new MergeLinegroups(spec.getInputFormat());
+		return new MergeLinegroups(spec.getInputType().getIdentifier());
 	}
 
 	@Override

@@ -29,7 +29,7 @@ public class MtmInfoFactory implements TaskGroupFactory {
 
 	@Override
 	public TaskGroup newTaskGroup(TaskGroupSpecification spec) {
-		return new MtmInfo(spec.getInputFormat());
+		return new MtmInfo(spec.getInputType());
 	}
 
 	@Override

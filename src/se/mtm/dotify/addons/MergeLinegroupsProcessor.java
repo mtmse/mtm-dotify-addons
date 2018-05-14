@@ -24,6 +24,7 @@ class MergeLinegroupsProcessor extends ExpandingTask {
 	}
 
 	@Override
+	@Deprecated
 	public List<InternalTask> resolve(File input) throws InternalTaskException {
 		return resolve(new DefaultAnnotatedFile.Builder(input).build());
 	}
@@ -32,7 +33,7 @@ class MergeLinegroupsProcessor extends ExpandingTask {
 	public List<InternalTask> resolve(AnnotatedFile input) throws InternalTaskException {
 		ArrayList<InternalTask> ret = new ArrayList<>();
 		try {
-			XMLInfo peekResult = XMLTools.parseXML(input.getFile(), true);
+			XMLInfo peekResult = XMLTools.parseXML(input.getPath().toFile(), true);
 			String rootNS = peekResult.getUri();
 			String rootElement = peekResult.getLocalName();
 			if ("dtbook".equals(rootElement) && "http://www.daisy.org/z3986/2005/dtbook/".equals(rootNS)) {

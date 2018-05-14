@@ -27,7 +27,7 @@ public class PefTweakerFactory implements TaskGroupFactory {
 
 	@Override
 	public TaskGroup newTaskGroup(TaskGroupSpecification spec) {
-		return new PefTweaker(spec.getInputFormat());
+		return new PefTweaker(spec.getInputType());
 	}
 
 	@Override
