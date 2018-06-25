@@ -28,7 +28,7 @@
 		Author
 			Joel Håkansson
 -->
-<xsl:stylesheet version="1.0"
+<xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:d="http://www.tpb.se/stylesheets/dtbinfo"
 	exclude-result-prefixes="d">
