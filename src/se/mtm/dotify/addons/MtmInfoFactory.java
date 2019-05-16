@@ -16,11 +16,10 @@ public class MtmInfoFactory implements TaskGroupFactory {
 
 	public MtmInfoFactory() {
 		Set<TaskGroupInformation> tmp = new HashSet<>();
-		//TODO: remove HTML as it may not be xml compliant and the implementation requires it
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("html").locale("sv-SE").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("xhtml").locale("sv-SE").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("dtbook").locale("sv-SE").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("xml").locale("sv-SE").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("html").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("xhtml").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("dtbook").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("xml").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
 		information = Collections.unmodifiableSet(tmp);
 	}
 	

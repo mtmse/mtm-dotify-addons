@@ -55,11 +55,7 @@
 			<xsl:choose>
 				<xsl:when test="lang('sv')">sv</xsl:when>
 				<xsl:when test="lang('en')">en</xsl:when>
-				<xsl:otherwise>
-					<xsl:message terminate="yes">
-						<xsl:value-of select="$errorMsg-undefinedLanguage"/>
-					</xsl:message>
-				</xsl:otherwise>
+				<xsl:otherwise>en</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
 	</xsl:variable>

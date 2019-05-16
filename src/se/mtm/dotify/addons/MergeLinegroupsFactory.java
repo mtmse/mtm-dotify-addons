@@ -16,8 +16,8 @@ public class MergeLinegroupsFactory implements TaskGroupFactory {
 
 	public MergeLinegroupsFactory() {
 		Set<TaskGroupInformation> tmp = new HashSet<>();
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("dtbook").locale("sv-SE").setRequiredOptions(MergeLinegroups.REQUIRED_OPTIONS).build());
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("xml").locale("sv-SE").setRequiredOptions(MergeLinegroups.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("dtbook").setRequiredOptions(MergeLinegroups.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("xml").setRequiredOptions(MergeLinegroups.REQUIRED_OPTIONS).build());
 		information = Collections.unmodifiableSet(tmp);
 	}
 	

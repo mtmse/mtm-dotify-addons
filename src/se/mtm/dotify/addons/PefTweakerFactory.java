@@ -16,7 +16,7 @@ public class PefTweakerFactory implements TaskGroupFactory {
 
 	public PefTweakerFactory() {
 		Set<TaskGroupInformation> tmp = new HashSet<>();
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("pef").locale("sv-SE").setRequiredOptions(PefTweaker.REQUIRED_OPTIONS).build());
+		tmp.add(TaskGroupInformation.newEnhanceBuilder("pef").setRequiredOptions(PefTweaker.REQUIRED_OPTIONS).build());
 		information = Collections.unmodifiableSet(tmp);
 	}
 	
