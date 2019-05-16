@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.daisy.streamline.api.media.FormatIdentifier;
 import org.daisy.streamline.api.option.UserOption;
@@ -14,6 +15,7 @@ import org.daisy.streamline.api.tasks.TaskSystemException;
 
 public class MtmInfo implements TaskGroup {
 	private static final String REQUIRED_KEY = "apply-mtm-addons";
+	private static final Logger LOGGER = Logger.getLogger(MtmInfo.class.getCanonicalName());
 	static final List<UserOption> REQUIRED_OPTIONS;
 	static {
 		List<UserOption> ret = new ArrayList<>();
@@ -40,6 +42,9 @@ public class MtmInfo implements TaskGroup {
 		if (validateRequirements(parameters)) {
 			ArrayList<InternalTask> ret = new ArrayList<>();
 			if ("html".equalsIgnoreCase(inputFormat)) {
+				LOGGER.warning("Format identifier \"html\" is deprecated, use format identifer \"xhtml\" instead.");
+				ret.addAll(MtmInfoProcessor.getHtmlTasks(parameters));
+			} else if ("xhtml".equalsIgnoreCase(inputFormat)) {
 				ret.addAll(MtmInfoProcessor.getHtmlTasks(parameters));
 			} else if ("dtbook".equalsIgnoreCase(inputFormat)) {
 				ret.addAll(MtmInfoProcessor.getDtbookTasks(parameters));
