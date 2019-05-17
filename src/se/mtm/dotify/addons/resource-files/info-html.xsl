@@ -17,11 +17,7 @@
 	<xsl:param name="identifier" select="'P??????'" dotify:desc="The product identifier" dotify:default="P??????"/>
 	<!-- keep/remove captions -->
 	<xsl:param name="captions" select="'keep'"/>
-	
-	<xsl:function name="html:lang" as="xs:string">
-		<xsl:param name="node" as="element()"/>
-		<xsl:value-of select="$node/ancestor-or-self::*[@xml:lang or @lang][1]/(@xml:lang, @lang)[1]"/>
-	</xsl:function>
+	<xsl:param name="l10nLang" select="'sv'"/>
 	
 	<xsl:function name="epub:types" as="xs:string*">
 		<xsl:param name="node" as="element()"/>
@@ -29,13 +25,11 @@
 	</xsl:function>
 	
 	<xsl:variable name="lang">
-		<xsl:for-each select="/html:html">
-			<xsl:choose>
-				<xsl:when test="starts-with(html:lang(.), 'sv')">sv</xsl:when>
-				<xsl:when test="starts-with(html:lang(.), 'en')">en</xsl:when>
-				<xsl:otherwise>en</xsl:otherwise>
-			</xsl:choose>
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="starts-with($l10nLang, 'sv')">sv</xsl:when>
+			<xsl:when test="starts-with($l10nLang, 'en')">en</xsl:when>
+			<xsl:otherwise>en</xsl:otherwise>
+		</xsl:choose>
 	</xsl:variable>
 	
 	<xsl:variable name="data" select="document('./localizations/punktinfo.xml')//language[lang($lang)]"/>

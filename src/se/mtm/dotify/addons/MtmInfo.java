@@ -2,20 +2,22 @@ package se.mtm.dotify.addons;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import org.daisy.streamline.api.media.FormatIdentifier;
 import org.daisy.streamline.api.option.UserOption;
 import org.daisy.streamline.api.option.UserOptionValue;
 import org.daisy.streamline.api.tasks.InternalTask;
 import org.daisy.streamline.api.tasks.TaskGroup;
+import org.daisy.streamline.api.tasks.TaskGroupSpecification;
 import org.daisy.streamline.api.tasks.TaskSystemException;
 
 public class MtmInfo implements TaskGroup {
 	private static final String REQUIRED_KEY = "apply-mtm-addons";
 	private static final Logger LOGGER = Logger.getLogger(MtmInfo.class.getCanonicalName());
+	private static final String LANG_KEY = "l10nLang";
 	static final List<UserOption> REQUIRED_OPTIONS;
 	static {
 		List<UserOption> ret = new ArrayList<>();
@@ -27,9 +29,11 @@ public class MtmInfo implements TaskGroup {
 		REQUIRED_OPTIONS = Collections.unmodifiableList(ret);
 	}
 	private final String inputFormat;
+	private final String lang;
 	
-	MtmInfo(FormatIdentifier inputFormat) {
-		this.inputFormat = inputFormat.getIdentifier();
+	MtmInfo(TaskGroupSpecification spec) {
+		this.inputFormat = spec.getInputType().getIdentifier();
+		this.lang = spec.getLocale();
 	}
 
 	@Override
@@ -38,8 +42,12 @@ public class MtmInfo implements TaskGroup {
 	}
 
 	@Override
-	public List<InternalTask> compile(Map<String, Object> parameters) throws TaskSystemException {
-		if (validateRequirements(parameters)) {
+	public List<InternalTask> compile(Map<String, Object> p) throws TaskSystemException {
+		if (validateRequirements(p)) {
+			Map<String, Object> parameters = new HashMap<>(p);
+			if (!parameters.containsKey(LANG_KEY)) {
+				parameters.put(LANG_KEY, lang);
+			}
 			ArrayList<InternalTask> ret = new ArrayList<>();
 			if ("html".equalsIgnoreCase(inputFormat)) {
 				LOGGER.warning("Format identifier \"html\" is deprecated, use format identifer \"xhtml\" instead.");

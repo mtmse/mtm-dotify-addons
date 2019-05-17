@@ -49,15 +49,14 @@
 	<xsl:param name="identifier" select="'P??????'" dotify:desc="The product identifier" dotify:default="P?????"/>
 	<!-- keep/remove captions -->
 	<xsl:param name="captions" select="'keep'" dotify:desc="Remove imagegroups that does not contain prodnotes" dotify:values="keep/remove" dotify:default="keep"/>
-	
+	<xsl:param name="l10nLang" select="'sv'"/>
+
 	<xsl:variable name="lang">
-		<xsl:for-each select="/dtb:dtbook">
-			<xsl:choose>
-				<xsl:when test="lang('sv')">sv</xsl:when>
-				<xsl:when test="lang('en')">en</xsl:when>
-				<xsl:otherwise>en</xsl:otherwise>
-			</xsl:choose>
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="starts-with($l10nLang, 'sv')">sv</xsl:when>
+			<xsl:when test="starts-with($l10nLang, 'en')">en</xsl:when>
+			<xsl:otherwise>en</xsl:otherwise>
+		</xsl:choose>
 	</xsl:variable>
 	
 	<xsl:variable name="data" select="document('./localizations/punktinfo.xml')//language[lang($lang)]"/>
