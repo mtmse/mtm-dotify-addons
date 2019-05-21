@@ -16,7 +16,6 @@ public class MtmInfoFactory implements TaskGroupFactory {
 
 	public MtmInfoFactory() {
 		Set<TaskGroupInformation> tmp = new HashSet<>();
-		tmp.add(TaskGroupInformation.newEnhanceBuilder("html").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
 		tmp.add(TaskGroupInformation.newEnhanceBuilder("xhtml").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
 		tmp.add(TaskGroupInformation.newEnhanceBuilder("dtbook").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
 		tmp.add(TaskGroupInformation.newEnhanceBuilder("xml").setRequiredOptions(MtmInfo.REQUIRED_OPTIONS).build());
