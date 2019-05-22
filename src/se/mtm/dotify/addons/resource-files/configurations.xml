@@ -21,7 +21,7 @@
 		<entry key="apply-pef-tweaks" value="true"/>
 		<entry key="show-toc-preamble" value="false"/>
 	</template>
-	<template identifier="mtm-b" desc="Tättryck. Versaler: ja. Avstavning: ja. Stilsorter: ja. Innehållsförteckning: ja max 6 nivåer. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: först. Baksidestext: först. Dubbelpaginering: ja. Markering av sidbyte: ja." nicename="B - Enkel facklitteratur vuxen">
+	<template identifier="mtm-b" desc="Tättryck. Versaler: ja. Avstavning: ja. Stilsorter: ja. Innehållsförteckning: ja max 6 nivåer. Volyminnehållsförteckningar: ja. Kolofon/bibliografisk information: först. Baksidestext: först. Dubbelpaginering: ja. Markering av sidbyte: ja." nicename="B - Facklitteratur vuxen">
 		<entry key="page-width" value="32"/>
 		<entry key="page-height" value="29"/>
 		<entry key="inner-margin" value="2"/>
