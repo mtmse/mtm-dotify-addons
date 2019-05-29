@@ -5,16 +5,16 @@
 	xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:epub="http://www.idpf.org/2007/ops"
 	xmlns:d="http://www.tpb.se/stylesheets/dtbinfo"
-	xmlns:dotify="http://brailleapps.github.io/ns/dotify"
+	xmlns:xtd="https://www.ologolo.org/ns/doc/xsl"
 	xmlns="http://www.w3.org/1999/xhtml"
-	exclude-result-prefixes="html epub d dotify">
+	exclude-result-prefixes="html epub d xtd">
 
 	<xsl:include href="lib/recursive-copy.xsl"/>
 	<xsl:include href="lib/localization.xsl"/>
 	<xsl:include href="lib/messages/errors.xsl"/>
 	
-	<xsl:param name="year" select="format-date(current-date(), '[Y0001]')" dotify:desc="The year for the product on the form YYYY."/>
-	<xsl:param name="identifier" select="'P??????'" dotify:desc="The product identifier" dotify:default="P??????"/>
+	<xsl:param name="year" select="format-date(current-date(), '[Y0001]')" xtd:desc="The year for the product on the form YYYY."/>
+	<xsl:param name="identifier" select="'P??????'" xtd:desc="The product identifier" xtd:default="P??????"/>
 	<!-- keep/remove captions -->
 	<xsl:param name="captions" select="'keep'"/>
 	<xsl:param name="l10nLang" select="'sv'"/>

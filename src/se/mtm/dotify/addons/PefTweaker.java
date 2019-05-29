@@ -5,13 +5,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.daisy.dotify.tasks.tools.XsltTask;
 import org.daisy.streamline.api.media.FormatIdentifier;
 import org.daisy.streamline.api.option.UserOption;
 import org.daisy.streamline.api.option.UserOptionValue;
 import org.daisy.streamline.api.tasks.InternalTask;
 import org.daisy.streamline.api.tasks.TaskGroup;
 import org.daisy.streamline.api.tasks.TaskSystemException;
+import org.daisy.streamline.api.tasks.library.XsltTask;
 
 public class PefTweaker implements TaskGroup {
 	private static final String REQUIRED_KEY = "apply-pef-tweaks";
@@ -43,8 +43,8 @@ public class PefTweaker implements TaskGroup {
 		if (validateRequirements(parameters)) {
 			ArrayList<InternalTask> ret = new ArrayList<>();
 			if ("pef".equalsIgnoreCase(inputFormat)) {
-				ret.add(new XsltTask("PEF metadata finalizer", this.getClass().getResource("resource-files/pef-meta-finalizer.xsl"), parameters));
-				ret.add(new XsltTask("PEF section patch", this.getClass().getResource("resource-files/pef-section-patch.xsl"), parameters));
+				ret.add(new XsltTask("PEF metadata finalizer", this.getClass().getResource("resource-files/pef-meta-finalizer.xsl"), parameters, XmlToolsAdapter::transform));
+				ret.add(new XsltTask("PEF section patch", this.getClass().getResource("resource-files/pef-section-patch.xsl"), parameters, XmlToolsAdapter::transform));
 			}
 			return ret;
 		} else {

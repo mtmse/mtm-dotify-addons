@@ -36,19 +36,19 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:dtb="http://www.daisy.org/z3986/2005/dtbook/"
 	xmlns:d="http://www.tpb.se/stylesheets/dtbinfo"
-	xmlns:dotify="http://brailleapps.github.io/ns/dotify"
+	xmlns:xtd="https://www.ologolo.org/ns/doc/xsl"
 	xmlns="http://www.daisy.org/z3986/2005/dtbook/"
-	exclude-result-prefixes="dtb d dotify">
+	exclude-result-prefixes="dtb d xtd">
 
 	<xsl:include href="./lib/recursive-copy.xsl"/>
 	<xsl:include href="./lib/dtbook-output.xsl"/>
 	<xsl:include href="./lib/validation-tests.xsl"/>
 	<xsl:include href="./lib/localization.xsl"/>
 	
-	<xsl:param name="year" select="format-date(current-date(), '[Y0001]')" dotify:desc="The year for the product on the form YYYY."/>
-	<xsl:param name="identifier" select="'P??????'" dotify:desc="The product identifier" dotify:default="P?????"/>
+	<xsl:param name="year" select="format-date(current-date(), '[Y0001]')" xtd:desc="The year for the product on the form YYYY."/>
+	<xsl:param name="identifier" select="'P??????'" xtd:desc="The product identifier" xtd:default="P?????"/>
 	<!-- keep/remove captions -->
-	<xsl:param name="captions" select="'keep'" dotify:desc="Remove imagegroups that does not contain prodnotes" dotify:values="keep/remove" dotify:default="keep"/>
+	<xsl:param name="captions" select="'keep'" xtd:desc="Remove imagegroups that does not contain prodnotes" xtd:values="keep/remove" xtd:default="keep"/>
 	<xsl:param name="l10nLang" select="'sv'"/>
 
 	<xsl:variable name="lang">

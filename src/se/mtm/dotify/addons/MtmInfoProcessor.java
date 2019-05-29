@@ -8,12 +8,12 @@ import java.util.Map;
 import org.daisy.dotify.common.xml.XMLInfo;
 import org.daisy.dotify.common.xml.XMLTools;
 import org.daisy.dotify.common.xml.XMLToolsException;
-import org.daisy.dotify.tasks.tools.XsltTask;
 import org.daisy.streamline.api.media.AnnotatedFile;
 import org.daisy.streamline.api.media.DefaultAnnotatedFile;
 import org.daisy.streamline.api.tasks.ExpandingTask;
 import org.daisy.streamline.api.tasks.InternalTask;
 import org.daisy.streamline.api.tasks.InternalTaskException;
+import org.daisy.streamline.api.tasks.library.XsltTask;
 
 class MtmInfoProcessor extends ExpandingTask {
 	private final Map<String, Object> xsltParams;
@@ -49,14 +49,14 @@ class MtmInfoProcessor extends ExpandingTask {
 	
 	static List<InternalTask> getDtbookTasks(Map<String, Object> parameters) {
 		ArrayList<InternalTask> ret = new ArrayList<>();
-		ret.add(new XsltTask("Move cover text", MtmInfoProcessor.class.getResource("resource-files/move-cover-text.xsl"), parameters));
-		ret.add(new XsltTask("MTM info (dtbook)", MtmInfoProcessor.class.getResource("resource-files/punktinfo.xsl"), parameters));
+		ret.add(new XsltTask("Move cover text", MtmInfoProcessor.class.getResource("resource-files/move-cover-text.xsl"), parameters, XmlToolsAdapter::transform));
+		ret.add(new XsltTask("MTM info (dtbook)", MtmInfoProcessor.class.getResource("resource-files/punktinfo.xsl"), parameters, XmlToolsAdapter::transform));
 		return ret;
 	}
 	
 	static List<InternalTask> getHtmlTasks(Map<String, Object> parameters) {
 		ArrayList<InternalTask> ret = new ArrayList<>();
-		ret.add(new XsltTask("MTM info (html)", MtmInfoProcessor.class.getResource("resource-files/info-html.xsl"), parameters));
+		ret.add(new XsltTask("MTM info (html)", MtmInfoProcessor.class.getResource("resource-files/info-html.xsl"), parameters, XmlToolsAdapter::transform));
 		return ret;
 	}
 
