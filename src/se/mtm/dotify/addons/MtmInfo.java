@@ -49,10 +49,7 @@ public class MtmInfo implements TaskGroup {
 				parameters.put(LANG_KEY, lang);
 			}
 			ArrayList<InternalTask> ret = new ArrayList<>();
-			if ("html".equalsIgnoreCase(inputFormat)) {
-				LOGGER.warning("Format identifier \"html\" is deprecated, use format identifer \"xhtml\" instead.");
-				ret.addAll(MtmInfoProcessor.getHtmlTasks(parameters));
-			} else if ("xhtml".equalsIgnoreCase(inputFormat)) {
+			if ("xhtml".equalsIgnoreCase(inputFormat)) {
 				ret.addAll(MtmInfoProcessor.getHtmlTasks(parameters));
 			} else if ("dtbook".equalsIgnoreCase(inputFormat)) {
 				ret.addAll(MtmInfoProcessor.getDtbookTasks(parameters));
