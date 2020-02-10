@@ -23,7 +23,7 @@
 			</lookup>
 			<lookup ref="publishers">
 				<item name="TPB" value="TPB, Johanneshov"/>
-				<item name="MTM" value="MTM, Johanneshov"/>
+				<item name="MTM" value="MTM, Malmö"/>
 				<item name="SIT" value="Specialpedagogiska institutet"/>
 			</lookup>
 			<string ref="line01">Punktskriftsboken är producerad <insert vref="2"/> av <insert vref="1" lref="publishers"/></string>
@@ -47,7 +47,7 @@
 			</lookup>
 			<lookup ref="publishers">
 				<item name="TPB" value="TPB, Johanneshov"/>
-				<item name="MTM" value="MTM, Johanneshov"/>
+				<item name="MTM" value="MTM, Malmö"/>
 				<item name="SIT" value="The Swedish Institute for Special Needs Education"/>
 			</lookup>
 			<string ref="line01">The braille book is produced <insert vref="2"/> by <insert vref="1" lref="publishers"/></string>
